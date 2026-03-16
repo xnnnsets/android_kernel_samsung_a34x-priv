@@ -131,9 +131,9 @@ jobs:
               KSU_DIR="KernelSU-Next"
               ;;
             "KSUN-SUSFS-DEV")
-              curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/dev/kernel/setup.sh" | bash -s dev_susfs
+              curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/dev/kernel/setup.sh" | bash -s legacy_susfs
               KSU_DIR="KernelSU-Next"
-              patch -p1 -d ./KernelSU-Next < ${{ env.G_EXT }}/patch/1.patch || true
+              # patch -p1 -d ./KernelSU-Next < ${{ env.G_EXT }}/patch/1.patch || true
               ;;
             "KSUN-SUSFS-v1.5.12")
               curl -LSs "https://raw.githubusercontent.com/xnnnsets/KernelSU-Next/refs/heads/next-1/kernel/setup.sh" | bash -s next-1
