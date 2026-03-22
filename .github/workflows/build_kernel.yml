@@ -239,6 +239,9 @@ jobs:
               echo "CONFIG_KSU_SUSFS_HIDE_KSU_SUSFS_SYMBOLS=y" >> "${{ env.DEFCONFIG }}"
               echo "CONFIG_KSU_SUSFS_SUS_SU=n" >> "${{ env.DEFCONFIG }}"
               ;;
+            "KSUN-SUSFS-DEV")
+              echo "CONFIG_KSU_SUSFS_SPOOF_UNAME=n" >> "${{ env.DEFCONFIG }}"
+              ;;
             "SUKISU-SUSFS")
               echo "# SUSFS Configuration" >> "${{ env.DEFCONFIG }}"
               echo "CONFIG_KSU_SUSFS=y" >> "${{ env.DEFCONFIG }}"
