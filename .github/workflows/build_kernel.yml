@@ -350,7 +350,7 @@ jobs:
             Image
             Image.sha256sum
             *.tar.md5
-            *.zip
+            ${{ env.zip_name }}
             kernel_config
             build_info.txt
 
